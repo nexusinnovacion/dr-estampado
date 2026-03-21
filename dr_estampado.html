@@ -584,4 +584,31 @@
   <p style="margin-top:10px;font-size:0.78rem;color:#444">Automatización digital impulsada por <span style="color:#4A9EFF;font-weight:600">⚡ Nexus Automation</span></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"><
+
+<script>
+  function filtrar(cat, btn) {
+    var tarjetas = document.querySelectorAll('.producto-card');
+    tarjetas.forEach(function(t) {
+      if (cat === 'todos' || t.getAttribute('data-cat') === cat) {
+        t.classList.remove('oculto');
+      } else {
+        t.classList.add('oculto');
+      }
+    });
+    document.querySelectorAll('.filtro-btn').forEach(function(b) {
+      b.classList.remove('activo');
+    });
+    if (btn) btn.classList.add('activo');
+    var catalogo = document.getElementById('catalogo');
+    if (catalogo) catalogo.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function toggleMenu() {
+    var links = document.querySelector('.nav-links');
+    if (links) {
+      links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    }
+  }
+</script>
+</body>
+</html>
