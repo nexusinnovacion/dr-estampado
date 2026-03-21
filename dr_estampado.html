@@ -147,7 +147,7 @@
     .nosotros-grid, .chatbot-grid { grid-template-columns: 1fr; }
     .datos-empresa { margin-top: 24px; }
     section { padding: 48px 5%; }
-    #contacto > div:last-child { grid-template-columns: 1fr !important; }
+    #contacto-final [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
@@ -164,7 +164,7 @@
     <li><a href="#catalogo">Catálogo</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#automatizacion" style="color:#7EB3FF">⚡ Automatizaciones</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#contacto-final">Contacto</a></li>
   </ul>
   <a class="nav-cta" href="https://wa.me/584123226195?text=Hola%20Dr.%20Estampado%2C%20quiero%20un%20presupuesto" target="_blank">Pedir Presupuesto</a>
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
@@ -348,143 +348,6 @@
   </div>
 </section>
 
-<section id="chatbot-section" style="background:var(--gris);padding:70px 5%;">
-  <div class="section-title" style="margin-bottom:52px;">
-    <h2>¡Escríbenos por <span>WhatsApp o Instagram!</span></h2>
-    <p>Dos equipos listos para atenderte. Escríbenos y en minutos tienes tu respuesta.</p>
-  </div>
-
-  <!-- FILA SUPERIOR: pasos + chat Dr. Estampado -->
-  <div class="chatbot-grid" style="margin-bottom:48px;">
-    <div class="chatbot-info">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--amarillo);flex-shrink:0;"></div>
-        <h3 style="margin:0;font-size:1.2rem;">Así de fácil es <span>pedir tu cotización</span></h3>
-      </div>
-      <p style="color:var(--gris-texto);line-height:1.7;margin-bottom:20px;">No necesitas ir a ningún lado. Solo escríbenos y en pocos minutos te damos precio y disponibilidad.</p>
-      <div class="paso"><div class="paso-num">1</div><div class="paso-texto"><h4>Haz clic en "Pedir cotización"</h4><p>Debajo de cada producto hay un botón que te lleva directo a WhatsApp.</p></div></div>
-      <div class="paso"><div class="paso-num">2</div><div class="paso-texto"><h4>Cuéntanos qué necesitas</h4><p>Dinos el producto, cantidad y si ya tienes un diseño o lo necesitas desde cero.</p></div></div>
-      <div class="paso"><div class="paso-num">3</div><div class="paso-texto"><h4>Recibe tu presupuesto</h4><p>Te respondemos con el precio y los pasos a seguir para tu pedido.</p></div></div>
-      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
-        <a class="btn-wa-grande" href="https://wa.me/584123226195?text=Hola%20Dr.%20Estampado%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank">💬 Abrir WhatsApp</a>
-        <a class="btn-ig" href="https://instagram.com/dr_estampado" target="_blank">📸 Ver Instagram</a>
-      </div>
-    </div>
-
-    <!-- CHAT DR. ESTAMPADO -->
-    <div class="chatbot-demo" style="border:2px solid var(--amarillo);">
-      <div class="chat-header" style="background:#1a1a1a;border-bottom:2px solid var(--amarillo);">
-        <div class="chat-avatar" style="overflow:hidden;padding:0;border:2px solid var(--amarillo);">
-          <img src="data:image/jpeg;base64,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" alt="Dr. Estampado" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-        </div>
-        <div>
-          <h4 style="color:var(--amarillo);">Dr. Estampado</h4>
-          <small style="color:#aaa;">🦁 Print King · En línea ✓</small>
-        </div>
-      </div>
-      <div class="chat-body">
-        <div class="burbuja recibido">¡Hola! 👋 Bienvenido a Dr. Estampado - Print King. ¿En qué te podemos ayudar?</div>
-        <div class="burbuja enviado">Hola, quiero 50 franelas con el logo de mi empresa.</div>
-        <div class="burbuja recibido">¡Con gusto! ¿Tienes el diseño listo o lo necesitas desde cero? ¿Qué técnica prefieres: sublimación, serigrafía o bordado?</div>
-        <div class="burbuja enviado">Tengo el logo en PNG. Quiero serigrafía.</div>
-        <div class="burbuja recibido">¡Perfecto! Te envío la cotización en un momento. 🔥</div>
-      </div>
-      <div class="chat-footer">
-        <input class="chat-input" type="text" placeholder="Escribe un mensaje...">
-        <button class="chat-send" style="background:#25D366;">➤</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- SEPARADOR -->
-  <div style="display:flex;align-items:center;gap:16px;margin-bottom:40px;">
-    <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(74,158,255,0.3));"></div>
-    <span style="
-      display:inline-flex;align-items:center;gap:8px;
-      background:linear-gradient(135deg,#0D1530,#1A0A2E);
-      border:1px solid rgba(74,158,255,0.3);
-      padding:6px 20px;border-radius:20px;
-      font-size:0.78rem;font-weight:700;letter-spacing:2px;color:#7EB3FF;
-    ">
-      <span style="width:6px;height:6px;border-radius:50%;background:#4A9EFF;display:inline-block;animation:pulse-dot 2s ease-in-out infinite;"></span>
-      NEXUS AUTOMATION
-    </span>
-    <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(74,158,255,0.3),transparent);"></div>
-  </div>
-
-  <!-- FILA INFERIOR: info Nexus + chat Nexus -->
-  <div class="chatbot-grid">
-    <div class="chatbot-info" style="background:linear-gradient(135deg,#0A0E1A,#0D1530);border:1px solid rgba(74,158,255,0.2);border-radius:16px;padding:32px;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#4A9EFF,#A855F7,#D4AF37);border-radius:16px 16px 0 0;"></div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#4A9EFF;flex-shrink:0;animation:pulse-dot 2s ease-in-out infinite;display:inline-block;"></span>
-        <h3 style="margin:0;font-size:1.2rem;color:#fff;">Automatiza con <span style="background:linear-gradient(90deg,#4A9EFF,#A855F7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Nexus Automation</span></h3>
-      </div>
-      <p style="color:#8899BB;line-height:1.7;margin-bottom:20px;">Chatbots, automatizaciones y páginas web para que tu negocio trabaje solo. Escríbenos y un especialista te contacta.</p>
-      <div class="paso" style="margin-bottom:14px;">
-        <div class="paso-num" style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);">1</div>
-        <div class="paso-texto"><h4 style="color:#fff;">Cuéntanos tu proceso</h4><p style="color:#8899BB;">¿Qué quieres automatizar? WhatsApp, pedidos, reportes...</p></div>
-      </div>
-      <div class="paso" style="margin-bottom:14px;">
-        <div class="paso-num" style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);">2</div>
-        <div class="paso-texto"><h4 style="color:#fff;">Diseñamos tu solución</h4><p style="color:#8899BB;">Te proponemos la automatización ideal para tu negocio.</p></div>
-      </div>
-      <div class="paso" style="margin-bottom:14px;">
-        <div class="paso-num" style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);">3</div>
-        <div class="paso-texto"><h4 style="color:#fff;">Lanzamos y escalamos</h4><p style="color:#8899BB;">Tu negocio trabajando solo mientras tú te enfocas en crecer.</p></div>
-      </div>
-      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
-        <a style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);color:#fff;padding:12px 20px;border-radius:10px;font-weight:700;font-size:0.88rem;display:inline-flex;align-items:center;gap:6px;text-decoration:none;"
-           href="https://wa.me/584241178066?text=Hola%20Nexus%20Automation%2C%20quiero%20automatizar%20mi%20negocio" target="_blank">
-          ⚡ Abrir WhatsApp
-        </a>
-        <a style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:12px 20px;border-radius:10px;font-weight:700;font-size:0.88rem;display:inline-flex;align-items:center;gap:6px;text-decoration:none;"
-           href="https://instagram.com/nexus.innovacion" target="_blank">
-          📸 Ver Instagram
-        </a>
-      </div>
-    </div>
-
-    <!-- CHAT NEXUS -->
-    <div class="chatbot-demo" style="border:2px solid rgba(74,158,255,0.4);background:#0A0E1A;">
-      <!-- Header Nexus -->
-      <div class="chat-header" style="background:linear-gradient(135deg,#0D1530,#1A0A2E);border-bottom:1px solid rgba(74,158,255,0.3);">
-        <div class="chat-avatar" style="overflow:hidden;padding:0;border:2px solid #4A9EFF;background:#0D1530;display:flex;align-items:center;justify-content:center;">
-          <!-- Logo Nexus SVG en miniatura -->
-          <svg width="32" height="32" viewBox="0 0 160 160">
-            <defs>
-              <linearGradient id="nx-hex" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E3A5F"/><stop offset="100%" stop-color="#0D1F3C"/></linearGradient>
-              <linearGradient id="nx-ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4A9EFF"/><stop offset="50%" stop-color="#7B3FE4"/><stop offset="100%" stop-color="#C855F7"/></linearGradient>
-              <linearGradient id="nx-gold" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#B8860B"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
-            </defs>
-            <polygon points="80,10 138,42 138,106 80,138 22,106 22,42" fill="url(#nx-hex)" stroke="url(#nx-ring)" stroke-width="4"/>
-            <polygon points="80,28 122,52 122,100 80,124 38,100 38,52" fill="none" stroke="rgba(74,158,255,0.4)" stroke-width="2"/>
-            <polygon points="56,105 75,58 85,58 95,82 115,42 118,55 90,95 80,72 68,105" fill="url(#nx-gold)"/>
-            <polyline points="38,100 55,100 62,88 74,110 84,76 96,96 110,96" fill="none" stroke="#4A9EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div>
-          <h4 style="color:#7EB3FF;">Nexus Automation</h4>
-          <small style="color:#8899BB;">⚡ Automatización · En línea ✓</small>
-        </div>
-      </div>
-      <!-- Cuerpo chat Nexus -->
-      <div class="chat-body" style="background:#0D1530;">
-        <div class="burbuja recibido" style="background:#1a2744;color:#ccc;border:1px solid rgba(74,158,255,0.2);">¡Hola! ⚡ Soy Nexus Automation. ¿Quieres automatizar tu negocio o necesitas una página web?</div>
-        <div class="burbuja enviado" style="background:linear-gradient(135deg,rgba(26,86,219,0.6),rgba(123,63,228,0.6));color:#fff;">Hola, quiero un chatbot para mi WhatsApp.</div>
-        <div class="burbuja recibido" style="background:#1a2744;color:#ccc;border:1px solid rgba(74,158,255,0.2);">¡Perfecto! ¿Cuántos mensajes recibes al día aprox.? Así te diseñamos el flujo ideal 🤖</div>
-        <div class="burbuja enviado" style="background:linear-gradient(135deg,rgba(26,86,219,0.6),rgba(123,63,228,0.6));color:#fff;">Unos 30 mensajes diarios.</div>
-        <div class="burbuja recibido" style="background:#1a2744;color:#ccc;border:1px solid rgba(74,158,255,0.2);">¡Excelente! Te preparamos una propuesta personalizada. 🚀</div>
-      </div>
-      <div class="chat-footer" style="background:#0D1530;border-top:1px solid rgba(74,158,255,0.2);">
-        <input class="chat-input" type="text" placeholder="Escribe un mensaje..." style="background:#1a2744;color:#ccc;border-color:rgba(74,158,255,0.3);">
-        <button class="chat-send" style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);">➤</button>
-      </div>
-    </div>
-  </div>
-
-</section>
-
 <!-- NEXUS AUTOMATION -->
 <section id="automatizacion" style="background:linear-gradient(135deg,#0A0E1A 0%,#0D1530 40%,#1A0A2E 100%);padding:80px 5%;position:relative;overflow:hidden;">
   <svg style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.07;pointer-events:none" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
@@ -575,114 +438,183 @@
 @media(max-width:768px){ .nosotros-grid{grid-template-columns:1fr!important} }
 </style>
 
-<section id="contacto" style="background:var(--negro);color:var(--blanco);padding:70px 5%;">
+<!-- SECCIÓN FINAL UNIFICADA: CONTACTO + CANALES -->
+<section id="contacto-final" style="padding:0;margin:0;">
 
-  <div class="section-title" style="margin-bottom:52px;">
-    <h2 style="color:var(--blanco);">¿Cómo <span>contactarnos?</span></h2>
-    <p style="color:#aaa;">Dos equipos, una misma misión: hacer crecer tu negocio.</p>
+  <!-- ════════════════════════════════════════════════════════════════════
+       PARTE 1 — DR. ESTAMPADO  (fondo negro/amarillo)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div style="background:var(--negro);padding:70px 5%;">
+
+    <!-- Encabezado Dr. Estampado -->
+    <div style="text-align:center;margin-bottom:48px;">
+      <div style="display:inline-flex;align-items:center;gap:10px;background:#1a1a1a;border:1px solid #333;padding:6px 20px;border-radius:20px;margin-bottom:18px;">
+        <div style="width:8px;height:8px;border-radius:50%;background:var(--amarillo);"></div>
+        <span style="color:var(--amarillo);font-size:0.8rem;font-weight:700;letter-spacing:2px;">DR. ESTAMPADO · PRINT KING</span>
+      </div>
+      <h2 style="color:var(--blanco);font-size:2rem;margin-bottom:10px;">¿Cómo <span style="color:var(--amarillo);">contactarnos?</span></h2>
+      <p style="color:#aaa;max-width:480px;margin:0 auto;">Escríbenos y en pocos minutos tienes precio y disponibilidad.</p>
+    </div>
+
+    <!-- Grid: info + chat Dr. Estampado -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;max-width:1100px;margin:0 auto 40px;">
+
+      <!-- Columna izquierda: tarjetas contacto + pasos -->
+      <div>
+        <!-- Tarjetas de datos -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;">
+          <div class="contacto-card"><div class="icono">📞</div><h4>Teléfono</h4><p>(0212) 322-6195<br>323-7564</p></div>
+          <div class="contacto-card"><div class="icono">✉️</div><h4>Email</h4><p>dr.estampado2010<br>@gmail.com</p></div>
+          <div class="contacto-card"><div class="icono">📍</div><h4>Dirección</h4><p>C.C. María Esperanza,<br>Local N5</p></div>
+          <div class="contacto-card"><div class="icono">📸</div><h4>Instagram</h4><p>@dr_estamapado</p></div>
+        </div>
+        <!-- Pasos -->
+        <div class="paso"><div class="paso-num">1</div><div class="paso-texto"><h4 style="color:#fff;">Haz clic en "Pedir cotización"</h4><p style="color:#aaa;">Debajo de cada producto hay un botón directo a WhatsApp.</p></div></div>
+        <div class="paso"><div class="paso-num">2</div><div class="paso-texto"><h4 style="color:#fff;">Cuéntanos qué necesitas</h4><p style="color:#aaa;">Producto, cantidad y si tienes diseño o lo necesitas desde cero.</p></div></div>
+        <div class="paso"><div class="paso-num">3</div><div class="paso-texto"><h4 style="color:#fff;">Recibe tu presupuesto</h4><p style="color:#aaa;">Te respondemos con el precio y los pasos a seguir.</p></div></div>
+        <!-- Botones -->
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn-wa-grande" href="https://wa.me/584123226195?text=Hola%20Dr.%20Estampado%2C%20quiero%20informaci%C3%B3n" target="_blank">💬 WhatsApp</a>
+          <a class="btn-ig" href="https://instagram.com/dr_estampado" target="_blank">📸 Instagram</a>
+        </div>
+      </div>
+
+      <!-- Columna derecha: demo chat Dr. Estampado -->
+      <div class="chatbot-demo" style="border:2px solid var(--amarillo);">
+        <div class="chat-header" style="background:#1a1a1a;border-bottom:2px solid var(--amarillo);">
+          <div class="chat-avatar" style="overflow:hidden;padding:0;border:2px solid var(--amarillo);">
+            <img src="data:image/jpeg;base64,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" alt="Dr. Estampado" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+          </div>
+          <div>
+            <h4 style="color:var(--amarillo);">Dr. Estampado</h4>
+            <small style="color:#aaa;">🦁 Print King · En línea ✓</small>
+          </div>
+        </div>
+        <div class="chat-body">
+          <div class="burbuja recibido">¡Hola! 👋 Bienvenido a Dr. Estampado. ¿En qué te podemos ayudar?</div>
+          <div class="burbuja enviado">Quiero 50 franelas con mi logo.</div>
+          <div class="burbuja recibido">¡Con gusto! ¿Tienes el diseño listo? ¿Qué técnica prefieres: sublimación, serigrafía o bordado?</div>
+          <div class="burbuja enviado">Tengo el logo en PNG. Serigrafía.</div>
+          <div class="burbuja recibido">¡Perfecto! Te envío la cotización ahora mismo. 🔥</div>
+        </div>
+        <div class="chat-footer">
+          <input class="chat-input" type="text" placeholder="Escribe un mensaje...">
+          <button class="chat-send" style="background:#25D366;">➤</button>
+        </div>
+      </div>
+
+    </div>
   </div>
 
-  <!-- GRID DOBLE -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1100px;margin:0 auto;">
+  <!-- ════════════════════════════════════════════════════════════════════
+       SEPARADOR VISUAL
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div style="height:4px;background:linear-gradient(90deg,#F5A800,#4A9EFF,#A855F7,#D4AF37);"></div>
 
-    <!-- ══ BLOQUE DR. ESTAMPADO ══════════════════════════════════════════ -->
-    <div style="background:#1a1a1a;border:1px solid #333;border-radius:16px;padding:32px;position:relative;overflow:hidden;">
-      <!-- Franja superior amarilla -->
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--amarillo);border-radius:16px 16px 0 0;"></div>
+  <!-- ════════════════════════════════════════════════════════════════════
+       PARTE 2 — NEXUS AUTOMATION  (fondo oscuro azul/morado)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div style="background:linear-gradient(135deg,#0A0E1A 0%,#0D1530 50%,#1A0A2E 100%);padding:70px 5%;position:relative;overflow:hidden;">
 
-      <!-- Encabezado -->
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--amarillo);flex-shrink:0;"></div>
-        <h3 style="color:var(--amarillo);font-size:1.1rem;font-weight:700;letter-spacing:1px;margin:0;">DR. ESTAMPADO</h3>
-        <span style="font-size:0.7rem;color:#666;letter-spacing:1px;">PRINT KING</span>
+    <!-- Orbes decorativos -->
+    <div style="position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(74,158,255,0.15) 0%,transparent 70%);pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,0.12) 0%,transparent 70%);pointer-events:none;"></div>
+
+    <!-- Encabezado Nexus -->
+    <div style="text-align:center;margin-bottom:48px;position:relative;z-index:2;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(74,158,255,0.1);border:1px solid rgba(74,158,255,0.3);padding:6px 20px;border-radius:20px;margin-bottom:18px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#4A9EFF;display:inline-block;animation:pulse-dot 2s ease-in-out infinite;"></span>
+        <span style="font-size:0.8rem;font-weight:700;letter-spacing:2px;color:#7EB3FF;text-transform:uppercase;">Nexus Automation</span>
       </div>
-
-      <!-- Tarjetas de contacto -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
-        <div class="contacto-card"><div class="icono">📞</div><h4>Teléfono</h4><p>(0212) 322-6195<br>323-7564</p></div>
-        <div class="contacto-card"><div class="icono">✉️</div><h4>Email</h4><p>dr.estampado2010<br>@gmail.com</p></div>
-        <div class="contacto-card"><div class="icono">📍</div><h4>Dirección</h4><p>C.C. María Esperanza,<br>Local N5</p></div>
-        <div class="contacto-card"><div class="icono">📸</div><h4>Instagram</h4><p>@dr_estamapado</p></div>
-      </div>
-
-      <!-- Botones Dr. Estampado -->
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a class="btn-wa-grande" style="font-size:0.85rem;padding:10px 18px;"
-           href="https://wa.me/584123226195?text=Hola%20Dr.%20Estampado%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">
-          💬 WhatsApp
-        </a>
-        <a class="btn-ig" style="font-size:0.85rem;padding:10px 18px;"
-           href="https://instagram.com/dr_estampado" target="_blank">
-          📸 Instagram
-        </a>
-      </div>
+      <h2 style="font-size:2rem;color:#fff;margin-bottom:10px;">Automatiza y <span style="background:linear-gradient(90deg,#4A9EFF,#A855F7,#D4AF37);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">crece con tecnología</span></h2>
+      <p style="color:#8899BB;max-width:480px;margin:0 auto;">Contáctanos y un especialista diseñará la solución perfecta para tu negocio.</p>
     </div>
 
-    <!-- ══ BLOQUE NEXUS AUTOMATION ═══════════════════════════════════════ -->
-    <div style="background:#0D1530;border:1px solid rgba(74,158,255,0.25);border-radius:16px;padding:32px;position:relative;overflow:hidden;">
-      <!-- Franja superior degradada Nexus -->
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#4A9EFF,#A855F7,#D4AF37);border-radius:16px 16px 0 0;"></div>
+    <!-- Grid: info + chat Nexus -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;max-width:1100px;margin:0 auto;position:relative;z-index:2;">
 
-      <!-- Encabezado -->
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#4A9EFF;flex-shrink:0;animation:pulse-dot 2s ease-in-out infinite;display:inline-block;"></span>
-        <h3 style="font-size:1.1rem;font-weight:700;letter-spacing:1px;margin:0;">
-          <span style="color:#fff;">NEXUS</span>
-          <span style="background:linear-gradient(90deg,#4A9EFF,#A855F7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;"> AUTOMATION</span>
-        </h3>
+      <!-- Columna izquierda: datos Nexus + pasos -->
+      <div>
+        <!-- Tarjetas datos Nexus -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;">
+          <div style="background:rgba(74,158,255,0.07);border:1px solid rgba(74,158,255,0.2);border-radius:10px;padding:14px 12px;">
+            <div style="font-size:1.4rem;margin-bottom:6px;">📞</div>
+            <div style="color:#7EB3FF;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Teléfono</div>
+            <p style="color:#ccc;font-size:0.82rem;">0424-117-8066</p>
+          </div>
+          <div style="background:rgba(74,158,255,0.07);border:1px solid rgba(74,158,255,0.2);border-radius:10px;padding:14px 12px;">
+            <div style="font-size:1.4rem;margin-bottom:6px;">✉️</div>
+            <div style="color:#7EB3FF;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Email</div>
+            <p style="color:#ccc;font-size:0.82rem;">pop.personalizado<br>.pop@gmail.com</p>
+          </div>
+          <div style="background:rgba(168,85,247,0.07);border:1px solid rgba(168,85,247,0.2);border-radius:10px;padding:14px 12px;">
+            <div style="font-size:1.4rem;margin-bottom:6px;">📸</div>
+            <div style="color:#C084FC;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Instagram</div>
+            <p style="color:#ccc;font-size:0.82rem;">@nexus.innovacion</p>
+          </div>
+          <div style="background:rgba(74,158,255,0.07);border:1px solid rgba(74,158,255,0.2);border-radius:10px;padding:14px 12px;">
+            <div style="font-size:1.4rem;margin-bottom:6px;">👍</div>
+            <div style="color:#7EB3FF;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Facebook</div>
+            <a href="https://www.facebook.com/profile.php?id=61582224383351" target="_blank" style="color:#7EB3FF;font-size:0.82rem;text-decoration:none;">Nexus Innovación</a>
+          </div>
+        </div>
+        <!-- Pasos Nexus -->
+        <div class="paso" style="margin-bottom:14px;"><div class="paso-num" style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);">1</div><div class="paso-texto"><h4 style="color:#fff;">Cuéntanos tu proceso</h4><p style="color:#8899BB;">¿Qué quieres automatizar? WhatsApp, pedidos, reportes...</p></div></div>
+        <div class="paso" style="margin-bottom:14px;"><div class="paso-num" style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);">2</div><div class="paso-texto"><h4 style="color:#fff;">Diseñamos tu solución</h4><p style="color:#8899BB;">Te proponemos la automatización ideal para tu negocio.</p></div></div>
+        <div class="paso" style="margin-bottom:14px;"><div class="paso-num" style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);">3</div><div class="paso-texto"><h4 style="color:#fff;">Lanzamos y escalamos</h4><p style="color:#8899BB;">Tu negocio trabajando solo mientras tú creces.</p></div></div>
+        <!-- Botones Nexus -->
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);color:#fff;padding:12px 20px;border-radius:10px;font-weight:700;font-size:0.88rem;display:inline-flex;align-items:center;gap:6px;text-decoration:none;" href="https://wa.me/584241178066?text=Hola%20Nexus%20Automation" target="_blank">⚡ WhatsApp</a>
+          <a style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:12px 20px;border-radius:10px;font-weight:700;font-size:0.88rem;display:inline-flex;align-items:center;gap:6px;text-decoration:none;" href="https://instagram.com/nexus.innovacion" target="_blank">📸 Instagram</a>
+          <a style="background:rgba(74,158,255,0.15);color:#7EB3FF;padding:12px 20px;border-radius:10px;font-weight:700;font-size:0.88rem;display:inline-flex;align-items:center;gap:6px;text-decoration:none;border:1px solid rgba(74,158,255,0.3);" href="https://www.facebook.com/profile.php?id=61582224383351" target="_blank">👍 Facebook</a>
+        </div>
       </div>
 
-      <!-- Tarjetas de contacto Nexus -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
-
-        <div style="background:rgba(74,158,255,0.07);border:1px solid rgba(74,158,255,0.2);border-radius:10px;padding:14px 12px;">
-          <div style="font-size:1.4rem;margin-bottom:6px;">📞</div>
-          <div style="color:#7EB3FF;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Teléfono</div>
-          <p style="color:#ccc;font-size:0.82rem;line-height:1.5;">0424-117-8066</p>
+      <!-- Columna derecha: demo chat Nexus -->
+      <div class="chatbot-demo" style="border:2px solid rgba(74,158,255,0.4);background:#0A0E1A;">
+        <div class="chat-header" style="background:linear-gradient(135deg,#0D1530,#1A0A2E);border-bottom:1px solid rgba(74,158,255,0.3);">
+          <div class="chat-avatar" style="overflow:hidden;padding:0;border:2px solid #4A9EFF;background:#0D1530;display:flex;align-items:center;justify-content:center;">
+            <svg width="32" height="32" viewBox="0 0 160 160">
+              <defs>
+                <linearGradient id="av-hex" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E3A5F"/><stop offset="100%" stop-color="#0D1F3C"/></linearGradient>
+                <linearGradient id="av-ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4A9EFF"/><stop offset="50%" stop-color="#7B3FE4"/><stop offset="100%" stop-color="#C855F7"/></linearGradient>
+                <linearGradient id="av-gold" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#B8860B"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+              </defs>
+              <polygon points="80,10 138,42 138,106 80,138 22,106 22,42" fill="url(#av-hex)" stroke="url(#av-ring)" stroke-width="4"/>
+              <polygon points="80,28 122,52 122,100 80,124 38,100 38,52" fill="none" stroke="rgba(74,158,255,0.4)" stroke-width="2"/>
+              <polygon points="56,105 75,58 85,58 95,82 115,42 118,55 90,95 80,72 68,105" fill="url(#av-gold)"/>
+              <polyline points="38,100 55,100 62,88 74,110 84,76 96,96 110,96" fill="none" stroke="#4A9EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h4 style="color:#7EB3FF;">Nexus Automation</h4>
+            <small style="color:#8899BB;">⚡ Automatización · En línea ✓</small>
+          </div>
         </div>
-
-        <div style="background:rgba(74,158,255,0.07);border:1px solid rgba(74,158,255,0.2);border-radius:10px;padding:14px 12px;">
-          <div style="font-size:1.4rem;margin-bottom:6px;">✉️</div>
-          <div style="color:#7EB3FF;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Email</div>
-          <p style="color:#ccc;font-size:0.82rem;line-height:1.5;">pop.personalizado<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b59bc5dac5f5d2d8d4dcd99bd6dad8">[email&#160;protected]</a></p>
+        <div class="chat-body" style="background:#0D1530;">
+          <div class="burbuja recibido" style="background:#1a2744;color:#ccc;border:1px solid rgba(74,158,255,0.2);">¡Hola! ⚡ Soy Nexus Automation. ¿Quieres automatizar tu negocio o necesitas una página web?</div>
+          <div class="burbuja enviado" style="background:linear-gradient(135deg,rgba(26,86,219,0.7),rgba(123,63,228,0.7));color:#fff;">Quiero un chatbot para mi WhatsApp.</div>
+          <div class="burbuja recibido" style="background:#1a2744;color:#ccc;border:1px solid rgba(74,158,255,0.2);">¡Perfecto! ¿Cuántos mensajes recibes al día aprox.? Así diseñamos el flujo ideal 🤖</div>
+          <div class="burbuja enviado" style="background:linear-gradient(135deg,rgba(26,86,219,0.7),rgba(123,63,228,0.7));color:#fff;">Unos 30 mensajes diarios.</div>
+          <div class="burbuja recibido" style="background:#1a2744;color:#ccc;border:1px solid rgba(74,158,255,0.2);">¡Excelente! Te preparamos una propuesta personalizada. 🚀</div>
         </div>
-
-        <div style="background:rgba(168,85,247,0.07);border:1px solid rgba(168,85,247,0.2);border-radius:10px;padding:14px 12px;">
-          <div style="font-size:1.4rem;margin-bottom:6px;">📸</div>
-          <div style="color:#C084FC;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Instagram</div>
-          <p style="color:#ccc;font-size:0.82rem;">@nexus.innovacion</p>
+        <div class="chat-footer" style="background:#0D1530;border-top:1px solid rgba(74,158,255,0.2);">
+          <input class="chat-input" type="text" placeholder="Escribe un mensaje..." style="background:#1a2744;color:#ccc;border-color:rgba(74,158,255,0.3);">
+          <button class="chat-send" style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);">➤</button>
         </div>
-
-        <div style="background:rgba(74,158,255,0.07);border:1px solid rgba(74,158,255,0.2);border-radius:10px;padding:14px 12px;">
-          <div style="font-size:1.4rem;margin-bottom:6px;">👍</div>
-          <div style="color:#7EB3FF;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Facebook</div>
-          <a href="https://www.facebook.com/profile.php?id=61582224383351" target="_blank"
-             style="color:#7EB3FF;font-size:0.82rem;word-break:break-all;text-decoration:none;">
-            Nexus Innovación
-          </a>
-        </div>
-
       </div>
 
-      <!-- Botones Nexus -->
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a style="background:linear-gradient(135deg,#1A56DB,#7B3FE4);color:#fff;padding:10px 18px;border-radius:10px;font-weight:700;font-size:0.85rem;display:inline-flex;align-items:center;gap:6px;text-decoration:none;transition:opacity 0.2s;"
-           href="https://wa.me/584241178066?text=Hola%20Nexus%20Automation%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n"
-           target="_blank" onmouseenter="this.style.opacity='.85'" onmouseleave="this.style.opacity='1'">
-          💬 WhatsApp
-        </a>
-        <a style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:10px 18px;border-radius:10px;font-weight:700;font-size:0.85rem;display:inline-flex;align-items:center;gap:6px;text-decoration:none;transition:opacity 0.2s;"
-           href="https://instagram.com/nexus.innovacion"
-           target="_blank" onmouseenter="this.style.opacity='.85'" onmouseleave="this.style.opacity='1'">
-          📸 Instagram
-        </a>
-      </div>
     </div>
-
-  </div><!-- /grid doble -->
+  </div>
 
 </section>
 
+<style>
+@keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+@media(max-width:768px){
+  #contacto-final .grid-2col { grid-template-columns:1fr !important; }
+}
+</style>
 <footer>
   <div style="margin-bottom:12px;"><img src="data:image/png;base64,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" alt="Dr. Estampado" style="width:54px;height:54px;object-fit:contain;border-radius:50%;background:rgba(255,255,255,0.04);padding:4px;opacity:0.75;"></div>
   <p>© 2025 <span>Dr. Estampado - Print King</span> · Inversiones de tu Interés C.A · J-299372080<br>
